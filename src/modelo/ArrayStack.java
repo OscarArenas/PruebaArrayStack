@@ -67,6 +67,10 @@ public class ArrayStack {
         return n == 0;
     }
 
+    public int size() {
+        return n;
+    }
+
     @Override
     public String toString() {
         String text = "";

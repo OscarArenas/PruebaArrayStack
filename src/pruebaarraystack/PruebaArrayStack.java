@@ -49,12 +49,13 @@ public class PruebaArrayStack {
 
         System.out.println("\nOtra pila:");
 
-        int n = Aleatorio.entero(5, 20);
+        int n = Aleatorio.entero(6, 12);
+
+        int[] codigos = Aleatorio.generarVectorEnteroSinRepeticiones(1, 100, n);
 
         ArrayStack pila2 = new ArrayStack();
-
-        for (int i = 0; i < n; i++) {
-            pila2.push(Aleatorio.entero(10 * n));
+        for (int i = 0; i < codigos.length; i++) {
+            pila2.push(codigos[i]);
         }
 
         System.out.println("Pila 2: " + pila2);
