@@ -77,10 +77,20 @@ public class ArrayStack {
 
         if (n > 0) {
             for (int i = n - 1; i > 0; i--) {
-                text += data[i] + ", ";
+                text += numberToString(data[i]) + ", ";
             }
-            text += data[0];
+            text += numberToString(data[0]);
         }
         return "[" + text + "]";
+    }
+    
+    private String numberToString(double real) {
+        int entero = (int) real;
+        String cadena = real + "";
+
+        if (real == entero) {
+            cadena = entero + "";
+        }
+        return cadena;
     }
 }

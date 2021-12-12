@@ -34,7 +34,7 @@ public class PruebaArrayStack {
         // Apilando
         pila.push(45);
         pila.push(83);
-        pila.push(47);
+        pila.push(47.91);
         pila.push(12);
         pila.push(77);
 
