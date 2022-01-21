@@ -42,12 +42,11 @@ public class ArrayStack {
     public double pop() throws EmptyStackException {
         if (n > 0) {
             n--;
-            double item = data[n];
 
             if (data.length / 4 == n) {
                 resize(data.length / 2);
             }
-            return item;
+            return data[n];
         }
         throw new EmptyStackException();
     }
@@ -83,7 +82,7 @@ public class ArrayStack {
         }
         return "[" + text + "]";
     }
-    
+
     private String numberToString(double real) {
         int entero = (int) real;
         String cadena = real + "";
