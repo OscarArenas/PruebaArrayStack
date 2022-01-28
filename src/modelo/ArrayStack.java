@@ -42,11 +42,12 @@ public class ArrayStack {
     public double pop() throws EmptyStackException {
         if (n > 0) {
             n--;
+            double item = data[n];
 
             if (data.length / 4 == n) {
                 resize(data.length / 2);
             }
-            return data[n];
+            return item;
         }
         throw new EmptyStackException();
     }
@@ -75,10 +76,10 @@ public class ArrayStack {
         String text = "";
 
         if (n > 0) {
-            for (int i = n - 1; i > 0; i--) {
+            for (int i = 0; i < n - 1; i++) {
                 text += numberToString(data[i]) + ", ";
             }
-            text += numberToString(data[0]);
+            text += numberToString(data[n - 1]);
         }
         return "[" + text + "]";
     }
