@@ -76,10 +76,10 @@ public class ArrayStack {
         String text = "";
 
         if (n > 0) {
-            for (int i = 0; i < n - 1; i++) {
-                text += numberToString(data[i]) + ", ";
+            text = numberToString(data[0]);
+            for (int i = 1; i < n; i++) {
+                text += ", " + numberToString(data[i]);
             }
-            text += numberToString(data[n - 1]);
         }
         return "[" + text + "]";
     }
